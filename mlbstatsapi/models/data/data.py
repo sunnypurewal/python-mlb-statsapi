@@ -329,6 +329,7 @@ class PlayDetails:
     trailcolor: Optional[str] = None
     fromcatcher: Optional[bool] = None
     disengagementnum: Optional[int] = None
+    violation: Optional[dict] = None
     
     def __post_init__(self):
         self.call = CodeDesc(**self.call) if self.call else self.call
