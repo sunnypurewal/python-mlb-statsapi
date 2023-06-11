@@ -4,6 +4,7 @@ from mlbstatsapi.models.venues import Venue
 from mlbstatsapi.models.game.gamedata import GameStatus
 from mlbstatsapi.models.teams import Team
 from mlbstatsapi.models.leagues import LeagueRecord
+from mlbstatsapi.models.people.people import Person
 
 
 @dataclass(repr=False)
@@ -32,10 +33,12 @@ class ScheduleGameTeam:
     seriesnumber: Optional[int] = None
     score: Optional[int] = None
     iswinner: Optional[bool] = False
+    probablepitcher: Optional[Person] = None
 
     def __post_init__(self):
         self.leaguerecord = LeagueRecord(**self.leaguerecord)
         self.team = Team(**self.team)
+        self.probablepitcher = Person(**self.probablepitcher) if self.probablepitcher else self.probablepitcher
 
     def __repr__(self):
         return f'ScheduleGameTeam(gamepk={self.leaguerecord}, team={self.team})'
@@ -59,6 +62,14 @@ class ScheduleHomeAndAway:
         self.home = ScheduleGameTeam(**self.home)
         self.away = ScheduleGameTeam(**self.away)
 
+@dataclass
+class ScheduleLineups:
+  homeplayers: Union[list[Person], list]
+  awayplayers: Union[list[Person], list]
+
+  def __post_init__(self):
+    self.homeplayers = [Person(**d) for d in self.homeplayers]
+    self.awayplayers = [Person(**d) for d in self.awayplayers]
 
 @dataclass(repr=False)
 class ScheduleGames:
@@ -171,11 +182,13 @@ class ScheduleGames:
     resumedfromdate: Optional[str] = None
     seriesgamenumber: Optional[int] = None
     gamesinseries: Optional[int] = None
+    lineups: Union[ScheduleLineups, dict] = field(default_factory=dict)
 
     def __post_init__(self):
         self.status = GameStatus(**self.status) if self.status else self.status
         self.teams = ScheduleHomeAndAway(**self.teams) if self.teams else self.teams
         self.venue = Venue(**self.venue) if self.venue else self.venue
+        self.lineups = ScheduleLineups(**self.lineups) if self.lineups else self.lineups
 
     def __repr__(self):
         return f'ScheduleGames(gamepk={self.gamepk}, link={self.link})'
