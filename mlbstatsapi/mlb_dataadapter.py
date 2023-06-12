@@ -60,7 +60,10 @@ class MlbDataAdapter:
         dict
         """
 
+
         if isinstance(data, Dict):
+            if 'copyright' in data:
+                del data['copyright']
             lowered_dict = {}
 
             for key, value in data.items():

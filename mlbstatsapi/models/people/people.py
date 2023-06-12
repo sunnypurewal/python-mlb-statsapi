@@ -166,6 +166,10 @@ class Person:
     def __repr__(self) -> str:
         kws = [f'{key}={value}' for key, value in self.__dict__.items() if value is not None and value]
         return "{}({})".format(type(self).__name__, ", ".join(kws))
+    
+    def __hash__(self):
+        return hash(self.id)
+
 
 @dataclass(kw_only=True, repr=False)
 class Player(Person):
