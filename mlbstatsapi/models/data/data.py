@@ -230,6 +230,9 @@ class CodeDesc:
     code: str
     description: Optional[str] = None
 
+@dataclass
+class SitCode(CodeDesc):
+    sortorder: Optional[int] = None
 
 @dataclass(repr=False)
 class Count:

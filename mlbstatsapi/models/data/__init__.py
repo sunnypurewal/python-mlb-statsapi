@@ -6,5 +6,6 @@
     HitData,
     CodeDesc,
     Count,
-    PlayDetails
+    PlayDetails,
+    SitCode
 )

@@ -4,6 +4,8 @@ import json
 import os
 
 from mlbstatsapi import Mlb
+from mlbstatsapi.mlb_dataadapter import MlbDataAdapter
+from mlbstatsapi.models.stats.hitting import HittingSituational, HittingSeason
 
 
 # Mocked JSON directory
@@ -18,6 +20,7 @@ path_to_hotcoldzone_file = os.path.join(current_directory, "../mock_json/stats/p
 path_to_hitting_playlog_file = os.path.join(current_directory, "../mock_json/stats/person/hitting_player_playlog.json")
 path_to_hitting_pitchlog_file = os.path.join(current_directory, "../mock_json/stats/person/hitting_player_pitchlog.json")
 path_to_spraychart_file = os.path.join(current_directory, "../mock_json/stats/person/spraychart.json")
+path_to_splits_file = os.path.join(current_directory, "../mock_json/stats/person/hitting_player_splits.json")
 
 SPRAYCHART = open(path_to_spraychart_file, "r", encoding="utf-8-sig").read()
 HOTCOLDZONE = open(path_to_hotcoldzone_file, "r", encoding="utf-8-sig").read()
@@ -27,6 +30,7 @@ NOT_FOUND_404 = open(path_to_not_found, "r", encoding="utf-8-sig").read()
 ERROR_500 = open(path_to_error, "r", encoding="utf-8-sig").read()
 HITTING_PLAY_LOG = open(path_to_hitting_playlog_file, "r", encoding="utf-8-sig").read()
 HITTING_PITCH_LOG = open(path_to_hitting_pitchlog_file, "r", encoding="utf-8-sig").read()
+HITTING_SPLITS = open(path_to_splits_file, "r", encoding="utf-8-sig").read()
 
 @requests_mock.Mocker()
 class TestHittingStatsMock(unittest.TestCase):
@@ -43,16 +47,28 @@ class TestHittingStatsMock(unittest.TestCase):
         cls.mock_hitting_playlog = json.loads(HITTING_PLAY_LOG)
         cls.mock_hitting_pitchlog = json.loads(HITTING_PITCH_LOG)
         cls.mock_spraycharts = json.loads(SPRAYCHART)
+        cls.mock_hitting_splits = json.loads(HITTING_SPLITS)
 
     @classmethod
     def tearDownClass(cls) -> None:
         pass
 
+    def test_hitting_situational(self, m):
+        stats = self.mock_hitting_splits['stats']
+        self.assertEqual(len(stats), 1)
+
+        adapter = MlbDataAdapter()
+
+        splits = stats[0]['splits']
+
+        # sit = HittingSeason(**adapter._transform_keys_in_data(splits[0]))
+        sit = HittingSituational(**adapter._transform_keys_in_data(splits[0]))
+
     def test_hitting_stat_attributes_player(self, m):
         """mlb get stats should return pitching stats"""
         m.get('https://statsapi.mlb.com/api/v1/people/665742/stats?stats=season&stats=career&stats=seasonAdvanced&stats=careerAdvanced&group=hitting', json=self.mock_player_stats,
         status_code=200)
-        self.stats = ['season', 'career','seasonAdvanced', 'careerAdvanced']
+        self.stats = ['season', 'career','seasonAdvanced', 'careerAdvanced', 'statSplits']
         self.group = ['hitting']
         # let's get some stats
         stats = self.mlb.get_player_stats(self.player.id, stats=self.stats, groups=self.group)
@@ -63,20 +79,26 @@ class TestHittingStatsMock(unittest.TestCase):
         # the end point should give us 2 hitting
         self.assertTrue('hitting' in stats)
         self.assertFalse('pitching' in stats)
-        self.assertEqual(len(stats['hitting']), 4)
+        self.assertEqual(len(stats['hitting']), 5)
 
         # check for split objects
         self.assertTrue(stats['hitting']['season'])
         self.assertTrue(stats['hitting']['career'])
         self.assertTrue(stats['hitting']['seasonadvanced'])
         self.assertTrue(stats['hitting']['careeradvanced'])
+        self.assertTrue(stats['hitting']['statsplits'])
 
         # let's pull out a object and test it
         season = stats['hitting']['season']
         career = stats['hitting']['career']
         season_advanced = stats['hitting']['seasonadvanced']
         career_advanced = stats['hitting']['careeradvanced']
+        stat_splits = stats['hitting']['statsplits']
         # check that attrs exist and contain data
+
+        self.assertEqual(stat_splits.totalsplits, len(stat_splits.splits))
+        self.assertEqual(stat_splits.group, 'hitting')
+        self.assertEqual(stat_splits.type, 'statSplits')
 
         self.assertEqual(season.totalsplits, len(season.splits))
         self.assertEqual(season.group, 'hitting')

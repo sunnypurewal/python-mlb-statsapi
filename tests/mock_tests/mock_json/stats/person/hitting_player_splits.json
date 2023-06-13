@@ -1,0 +1,934 @@
+{
+  "copyright": "Copyright 2022 MLB Advanced Media, L.P.  Use of any content on this page acknowledges agreement to the terms posted here http://gdx.mlb.com/components/copyright.txt",
+  "stats": [
+    {
+      "type": {
+        "displayName": "statSplits"
+      },
+      "group": {
+        "displayName": "hitting"
+      },
+      "exemptions": [],
+      "splits": [
+        {
+          "season": "2023",
+          "stat": {
+            "gamesPlayed": 62,
+            "groundOuts": 38,
+            "airOuts": 54,
+            "runs": 25,
+            "doubles": 3,
+            "triples": 1,
+            "homeRuns": 14,
+            "strikeOuts": 30,
+            "baseOnBalls": 18,
+            "intentionalWalks": 0,
+            "hits": 37,
+            "hitByPitch": 3,
+            "avg": ".233",
+            "atBats": 159,
+            "obp": ".322",
+            "slg": ".528",
+            "ops": ".850",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "groundIntoDoublePlay": 4,
+            "groundIntoTriplePlay": 0,
+            "numberOfPitches": 690,
+            "plateAppearances": 180,
+            "totalBases": 84,
+            "rbi": 28,
+            "leftOnBase": 84,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".200",
+            "groundOutsToAirouts": "0.70",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "11.36"
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121",
+            "teamName": "Mets"
+          },
+          "player": {
+            "id": 624413,
+            "fullName": "Pete Alonso",
+            "link": "/api/v1/people/624413",
+            "firstName": "Pete",
+            "lastName": "Alonso"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R",
+          "split": {
+            "code": "ig01",
+            "description": "Innings One to Six",
+            "sortOrder": 161
+          },
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        },
+        {
+          "season": "2023",
+          "stat": {
+            "gamesPlayed": 59,
+            "groundOuts": 16,
+            "airOuts": 17,
+            "runs": 16,
+            "doubles": 1,
+            "triples": 0,
+            "homeRuns": 8,
+            "strikeOuts": 21,
+            "baseOnBalls": 9,
+            "intentionalWalks": 0,
+            "hits": 16,
+            "hitByPitch": 2,
+            "avg": ".229",
+            "atBats": 70,
+            "obp": ".333",
+            "slg": ".586",
+            "ops": ".919",
+            "caughtStealing": 0,
+            "stolenBases": 1,
+            "stolenBasePercentage": "1.000",
+            "groundIntoDoublePlay": 2,
+            "groundIntoTriplePlay": 0,
+            "numberOfPitches": 295,
+            "plateAppearances": 81,
+            "totalBases": 41,
+            "rbi": 21,
+            "leftOnBase": 20,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".195",
+            "groundOutsToAirouts": "0.94",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "8.75"
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121",
+            "teamName": "Mets"
+          },
+          "player": {
+            "id": 624413,
+            "fullName": "Pete Alonso",
+            "link": "/api/v1/people/624413",
+            "firstName": "Pete",
+            "lastName": "Alonso"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R",
+          "split": {
+            "code": "ig07",
+            "description": "Seventh or Later",
+            "sortOrder": 162
+          },
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        },
+        {
+          "season": "2023",
+          "stat": {
+            "gamesPlayed": 60,
+            "groundOuts": 26,
+            "airOuts": 46,
+            "doubles": 2,
+            "triples": 1,
+            "homeRuns": 11,
+            "strikeOuts": 28,
+            "baseOnBalls": 12,
+            "intentionalWalks": 0,
+            "hits": 26,
+            "hitByPitch": 1,
+            "avg": ".206",
+            "atBats": 126,
+            "obp": ".281",
+            "slg": ".500",
+            "ops": ".781",
+            "groundIntoDoublePlay": 0,
+            "groundIntoTriplePlay": 0,
+            "numberOfPitches": 521,
+            "plateAppearances": 139,
+            "totalBases": 63,
+            "rbi": 11,
+            "leftOnBase": 0,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".172",
+            "groundOutsToAirouts": "0.57",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "11.46"
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121",
+            "teamName": "Mets"
+          },
+          "player": {
+            "id": 624413,
+            "fullName": "Pete Alonso",
+            "link": "/api/v1/people/624413",
+            "firstName": "Pete",
+            "lastName": "Alonso"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R",
+          "split": {
+            "code": "r0",
+            "description": "Bases Empty",
+            "sortOrder": 193
+          },
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        },
+        {
+          "season": "2023",
+          "stat": {
+            "gamesPlayed": 9,
+            "groundOuts": 1,
+            "airOuts": 2,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 4,
+            "baseOnBalls": 0,
+            "intentionalWalks": 0,
+            "hits": 2,
+            "hitByPitch": 0,
+            "avg": ".222",
+            "atBats": 9,
+            "obp": ".222",
+            "slg": ".556",
+            "ops": ".778",
+            "groundIntoDoublePlay": 0,
+            "groundIntoTriplePlay": 0,
+            "numberOfPitches": 40,
+            "plateAppearances": 9,
+            "totalBases": 5,
+            "rbi": 7,
+            "leftOnBase": 20,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".250",
+            "groundOutsToAirouts": "0.50",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "9.00"
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121",
+            "teamName": "Mets"
+          },
+          "player": {
+            "id": 624413,
+            "fullName": "Pete Alonso",
+            "link": "/api/v1/people/624413",
+            "firstName": "Pete",
+            "lastName": "Alonso"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R",
+          "split": {
+            "code": "r123",
+            "description": "Bases Loaded",
+            "sortOrder": 194
+          },
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        },
+        {
+          "season": "2023",
+          "stat": {
+            "gamesPlayed": 41,
+            "groundOuts": 16,
+            "airOuts": 12,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 7,
+            "strikeOuts": 7,
+            "baseOnBalls": 8,
+            "intentionalWalks": 0,
+            "hits": 12,
+            "hitByPitch": 3,
+            "avg": ".255",
+            "atBats": 47,
+            "obp": ".397",
+            "slg": ".702",
+            "ops": "1.099",
+            "groundIntoDoublePlay": 4,
+            "groundIntoTriplePlay": 0,
+            "numberOfPitches": 215,
+            "plateAppearances": 58,
+            "totalBases": 33,
+            "rbi": 14,
+            "leftOnBase": 35,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".152",
+            "groundOutsToAirouts": "1.33",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "6.71"
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121",
+            "teamName": "Mets"
+          },
+          "player": {
+            "id": 624413,
+            "fullName": "Pete Alonso",
+            "link": "/api/v1/people/624413",
+            "firstName": "Pete",
+            "lastName": "Alonso"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R",
+          "split": {
+            "code": "r1",
+            "description": "Runner at 1st",
+            "sortOrder": 195
+          },
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        },
+        {
+          "season": "2023",
+          "stat": {
+            "gamesPlayed": 14,
+            "groundOuts": 4,
+            "airOuts": 2,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 3,
+            "baseOnBalls": 1,
+            "intentionalWalks": 0,
+            "hits": 3,
+            "hitByPitch": 1,
+            "avg": ".250",
+            "atBats": 12,
+            "obp": ".357",
+            "slg": ".500",
+            "ops": ".857",
+            "groundIntoDoublePlay": 1,
+            "groundIntoTriplePlay": 0,
+            "numberOfPitches": 40,
+            "plateAppearances": 14,
+            "totalBases": 6,
+            "rbi": 4,
+            "leftOnBase": 18,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".250",
+            "groundOutsToAirouts": "2.00",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "12.00"
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121",
+            "teamName": "Mets"
+          },
+          "player": {
+            "id": 624413,
+            "fullName": "Pete Alonso",
+            "link": "/api/v1/people/624413",
+            "firstName": "Pete",
+            "lastName": "Alonso"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R",
+          "split": {
+            "code": "r12",
+            "description": "Runners at 1st & 2nd",
+            "sortOrder": 196
+          },
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        },
+        {
+          "season": "2023",
+          "stat": {
+            "gamesPlayed": 3,
+            "groundOuts": 1,
+            "airOuts": 0,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 2,
+            "baseOnBalls": 0,
+            "intentionalWalks": 0,
+            "hits": 1,
+            "hitByPitch": 0,
+            "avg": ".250",
+            "atBats": 4,
+            "obp": ".250",
+            "slg": "1.000",
+            "ops": "1.250",
+            "groundIntoDoublePlay": 1,
+            "groundIntoTriplePlay": 0,
+            "numberOfPitches": 10,
+            "plateAppearances": 4,
+            "totalBases": 4,
+            "rbi": 3,
+            "leftOnBase": 6,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".000",
+            "groundOutsToAirouts": "1.00",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "4.00"
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121",
+            "teamName": "Mets"
+          },
+          "player": {
+            "id": 624413,
+            "fullName": "Pete Alonso",
+            "link": "/api/v1/people/624413",
+            "firstName": "Pete",
+            "lastName": "Alonso"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R",
+          "split": {
+            "code": "r13",
+            "description": "Runners at 1st & 3rd",
+            "sortOrder": 197
+          },
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        },
+        {
+          "season": "2023",
+          "stat": {
+            "gamesPlayed": 18,
+            "groundOuts": 4,
+            "airOuts": 5,
+            "doubles": 1,
+            "triples": 0,
+            "homeRuns": 1,
+            "strikeOuts": 3,
+            "baseOnBalls": 2,
+            "intentionalWalks": 0,
+            "hits": 5,
+            "hitByPitch": 0,
+            "avg": ".294",
+            "atBats": 17,
+            "obp": ".368",
+            "slg": ".529",
+            "ops": ".897",
+            "groundIntoDoublePlay": 0,
+            "groundIntoTriplePlay": 0,
+            "numberOfPitches": 82,
+            "plateAppearances": 19,
+            "totalBases": 9,
+            "rbi": 4,
+            "leftOnBase": 12,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".308",
+            "groundOutsToAirouts": "0.80",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "17.00"
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121",
+            "teamName": "Mets"
+          },
+          "player": {
+            "id": 624413,
+            "fullName": "Pete Alonso",
+            "link": "/api/v1/people/624413",
+            "firstName": "Pete",
+            "lastName": "Alonso"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R",
+          "split": {
+            "code": "r2",
+            "description": "Runner at 2nd",
+            "sortOrder": 198
+          },
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        },
+        {
+          "season": "2023",
+          "stat": {
+            "gamesPlayed": 7,
+            "groundOuts": 1,
+            "airOuts": 2,
+            "doubles": 0,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 1,
+            "baseOnBalls": 2,
+            "intentionalWalks": 0,
+            "hits": 1,
+            "hitByPitch": 0,
+            "avg": ".200",
+            "atBats": 5,
+            "obp": ".429",
+            "slg": ".200",
+            "ops": ".629",
+            "groundIntoDoublePlay": 0,
+            "groundIntoTriplePlay": 0,
+            "numberOfPitches": 31,
+            "plateAppearances": 7,
+            "totalBases": 1,
+            "rbi": 3,
+            "leftOnBase": 7,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".250",
+            "groundOutsToAirouts": "0.50",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "-.--"
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121",
+            "teamName": "Mets"
+          },
+          "player": {
+            "id": 624413,
+            "fullName": "Pete Alonso",
+            "link": "/api/v1/people/624413",
+            "firstName": "Pete",
+            "lastName": "Alonso"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R",
+          "split": {
+            "code": "r23",
+            "description": "Runners at 2nd & 3rd",
+            "sortOrder": 199
+          },
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        },
+        {
+          "season": "2023",
+          "stat": {
+            "gamesPlayed": 10,
+            "groundOuts": 1,
+            "airOuts": 2,
+            "doubles": 1,
+            "triples": 0,
+            "homeRuns": 0,
+            "strikeOuts": 3,
+            "baseOnBalls": 2,
+            "intentionalWalks": 0,
+            "hits": 3,
+            "hitByPitch": 0,
+            "avg": ".333",
+            "atBats": 9,
+            "obp": ".455",
+            "slg": ".444",
+            "ops": ".899",
+            "groundIntoDoublePlay": 0,
+            "groundIntoTriplePlay": 0,
+            "numberOfPitches": 46,
+            "plateAppearances": 11,
+            "totalBases": 4,
+            "rbi": 3,
+            "leftOnBase": 6,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".500",
+            "groundOutsToAirouts": "0.50",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "-.--"
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121",
+            "teamName": "Mets"
+          },
+          "player": {
+            "id": 624413,
+            "fullName": "Pete Alonso",
+            "link": "/api/v1/people/624413",
+            "firstName": "Pete",
+            "lastName": "Alonso"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R",
+          "split": {
+            "code": "r3",
+            "description": "Runner at 3rd",
+            "sortOrder": 200
+          },
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        },
+        {
+          "season": "2023",
+          "stat": {
+            "gamesPlayed": 51,
+            "groundOuts": 23,
+            "airOuts": 31,
+            "doubles": 2,
+            "triples": 1,
+            "homeRuns": 7,
+            "strikeOuts": 16,
+            "baseOnBalls": 7,
+            "intentionalWalks": 0,
+            "hits": 21,
+            "hitByPitch": 1,
+            "avg": ".231",
+            "atBats": 91,
+            "obp": ".293",
+            "slg": ".505",
+            "ops": ".798",
+            "groundIntoDoublePlay": 1,
+            "groundIntoTriplePlay": 0,
+            "numberOfPitches": 368,
+            "plateAppearances": 99,
+            "totalBases": 46,
+            "rbi": 18,
+            "leftOnBase": 21,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".206",
+            "groundOutsToAirouts": "0.74",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "13.00"
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121",
+            "teamName": "Mets"
+          },
+          "player": {
+            "id": 624413,
+            "fullName": "Pete Alonso",
+            "link": "/api/v1/people/624413",
+            "firstName": "Pete",
+            "lastName": "Alonso"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R",
+          "split": {
+            "code": "o0",
+            "description": "No Outs",
+            "sortOrder": 211
+          },
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        },
+        {
+          "season": "2023",
+          "stat": {
+            "gamesPlayed": 45,
+            "groundOuts": 15,
+            "airOuts": 18,
+            "doubles": 1,
+            "triples": 0,
+            "homeRuns": 11,
+            "strikeOuts": 13,
+            "baseOnBalls": 7,
+            "intentionalWalks": 0,
+            "hits": 20,
+            "hitByPitch": 1,
+            "avg": ".303",
+            "atBats": 66,
+            "obp": ".378",
+            "slg": ".818",
+            "ops": "1.196",
+            "groundIntoDoublePlay": 5,
+            "groundIntoTriplePlay": 0,
+            "numberOfPitches": 261,
+            "plateAppearances": 74,
+            "totalBases": 54,
+            "rbi": 20,
+            "leftOnBase": 31,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".214",
+            "groundOutsToAirouts": "0.83",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "6.00"
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121",
+            "teamName": "Mets"
+          },
+          "player": {
+            "id": 624413,
+            "fullName": "Pete Alonso",
+            "link": "/api/v1/people/624413",
+            "firstName": "Pete",
+            "lastName": "Alonso"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R",
+          "split": {
+            "code": "o1",
+            "description": "One Out",
+            "sortOrder": 212
+          },
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        },
+        {
+          "season": "2023",
+          "stat": {
+            "gamesPlayed": 45,
+            "groundOuts": 16,
+            "airOuts": 22,
+            "doubles": 1,
+            "triples": 0,
+            "homeRuns": 4,
+            "strikeOuts": 22,
+            "baseOnBalls": 13,
+            "intentionalWalks": 0,
+            "hits": 12,
+            "hitByPitch": 3,
+            "avg": ".167",
+            "atBats": 72,
+            "obp": ".318",
+            "slg": ".347",
+            "ops": ".665",
+            "groundIntoDoublePlay": 0,
+            "groundIntoTriplePlay": 0,
+            "numberOfPitches": 356,
+            "plateAppearances": 88,
+            "totalBases": 25,
+            "rbi": 11,
+            "leftOnBase": 52,
+            "sacBunts": 0,
+            "sacFlies": 0,
+            "babip": ".174",
+            "groundOutsToAirouts": "0.73",
+            "catchersInterference": 0,
+            "atBatsPerHomeRun": "18.00"
+          },
+          "team": {
+            "id": 121,
+            "name": "New York Mets",
+            "link": "/api/v1/teams/121",
+            "teamName": "Mets"
+          },
+          "player": {
+            "id": 624413,
+            "fullName": "Pete Alonso",
+            "link": "/api/v1/people/624413",
+            "firstName": "Pete",
+            "lastName": "Alonso"
+          },
+          "league": {
+            "id": 104,
+            "name": "National League",
+            "link": "/api/v1/league/104"
+          },
+          "sport": {
+            "id": 1,
+            "link": "/api/v1/sports/1",
+            "name": "Major League Baseball",
+            "abbreviation": "MLB"
+          },
+          "gameType": "R",
+          "split": {
+            "code": "o2",
+            "description": "Two Outs",
+            "sortOrder": 213
+          },
+          "position": {
+            "code": "3",
+            "name": "First Base",
+            "type": "Infielder",
+            "abbreviation": "1B"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -9,7 +9,9 @@ from mlbstatsapi.models.data import (
     PitchData,
     HitData,
     Count,
-    PlayDetails
+    PlayDetails,
+    CodeDesc,
+    SitCode
 )
 from .stats import (
     Sabermetrics,
@@ -349,6 +351,16 @@ class HittingCareer(Split):
         super().__post_init__()
         self.stat = SimpleHittingSplit(**self.stat)
 
+@dataclass(kw_only=True, repr=False)
+class HittingSituational(Split):
+    _stat = ['statSplits']
+    stat: Union[SimpleHittingSplit, dict]
+    split: Union[SitCode, dict]
+
+    def __post_init__(self):
+        super().__post_init__()
+        self.stat = SimpleHittingSplit(**self.stat)
+        self.split = SitCode(**self.split)
 
 @dataclass(kw_only=True, repr=False)
 class HittingSeason(Split):
