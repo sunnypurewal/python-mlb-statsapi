@@ -54,7 +54,7 @@ class TestPitchingStatsMock(unittest.TestCase):
         """mlb get stats should return pitching stats"""
         m.get('https://statsapi.mlb.com/api/v1/people/660271/stats?stats=season&stats=career&stats=seasonAdvanced&stats=careerAdvanced&group=pitching', json=self.mock_player_stats,
         status_code=200)
-        self.stats = ['season', 'career', 'seasonAdvanced', 'careerAdvanced']
+        self.stats = ['season', 'career', 'seasonAdvanced', 'careerAdvanced', 'statSplits']
         self.group = ['pitching']
         # let's get some stats
         stats = self.mlb.get_player_stats(self.pitcher.id, stats=self.stats, groups=self.group)
@@ -65,18 +65,24 @@ class TestPitchingStatsMock(unittest.TestCase):
         # the end point should give us 2 hitting
         self.assertTrue('pitching' in stats)
         self.assertFalse('hitting' in stats)
-        self.assertEqual(len(stats['pitching']), 4)
+        self.assertEqual(len(stats['pitching']), 5)
 
         # check for split objects
         self.assertTrue(stats['pitching']['season'])
         self.assertTrue(stats['pitching']['career'])
         self.assertTrue(stats['pitching']['seasonadvanced'])
         self.assertTrue(stats['pitching']['careeradvanced'])
+        self.assertTrue(stats['pitching']['statsplits'])
 
         season = stats['pitching']['season']
         career = stats['pitching']['career']
         season_advanced = stats['pitching']['seasonadvanced']
         career_advanced = stats['pitching']['careeradvanced']
+        stat_splits = stats['pitching']['statsplits']
+
+        self.assertEqual(stat_splits.totalsplits, len(stat_splits.splits))
+        self.assertEqual(stat_splits.group, 'pitching')
+        self.assertEqual(stat_splits.type, 'statSplits')
 
         self.assertEqual(season.totalsplits, len(season.splits))
         self.assertEqual(season.group, 'pitching')
