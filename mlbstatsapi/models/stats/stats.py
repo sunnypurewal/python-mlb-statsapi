@@ -147,7 +147,7 @@ class Stat:
     type: str
     totalsplits: int
     exemptions: Optional[List] = field(default_factory=list)
-    splits: Optional[List] = field(default_factory=list)
+    splits: Optional[List[Split]] = field(default_factory=list)
 
     def __repr__(self):
         return f'Stat(group={self.group}, type={self.type})'
