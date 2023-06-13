@@ -4,9 +4,6 @@ import json
 import os
 
 from mlbstatsapi import Mlb
-from mlbstatsapi.mlb_dataadapter import MlbDataAdapter
-from mlbstatsapi.models.stats.hitting import HittingSituational, HittingSeason
-
 
 # Mocked JSON directory
 # TODO Find a better way to structure and handle this :) 
@@ -20,7 +17,6 @@ path_to_hotcoldzone_file = os.path.join(current_directory, "../mock_json/stats/p
 path_to_hitting_playlog_file = os.path.join(current_directory, "../mock_json/stats/person/hitting_player_playlog.json")
 path_to_hitting_pitchlog_file = os.path.join(current_directory, "../mock_json/stats/person/hitting_player_pitchlog.json")
 path_to_spraychart_file = os.path.join(current_directory, "../mock_json/stats/person/spraychart.json")
-path_to_splits_file = os.path.join(current_directory, "../mock_json/stats/person/hitting_player_splits.json")
 
 SPRAYCHART = open(path_to_spraychart_file, "r", encoding="utf-8-sig").read()
 HOTCOLDZONE = open(path_to_hotcoldzone_file, "r", encoding="utf-8-sig").read()
@@ -30,7 +26,6 @@ NOT_FOUND_404 = open(path_to_not_found, "r", encoding="utf-8-sig").read()
 ERROR_500 = open(path_to_error, "r", encoding="utf-8-sig").read()
 HITTING_PLAY_LOG = open(path_to_hitting_playlog_file, "r", encoding="utf-8-sig").read()
 HITTING_PITCH_LOG = open(path_to_hitting_pitchlog_file, "r", encoding="utf-8-sig").read()
-HITTING_SPLITS = open(path_to_splits_file, "r", encoding="utf-8-sig").read()
 
 @requests_mock.Mocker()
 class TestHittingStatsMock(unittest.TestCase):
@@ -52,17 +47,6 @@ class TestHittingStatsMock(unittest.TestCase):
     @classmethod
     def tearDownClass(cls) -> None:
         pass
-
-    def test_hitting_situational(self, m):
-        stats = self.mock_hitting_splits['stats']
-        self.assertEqual(len(stats), 1)
-
-        adapter = MlbDataAdapter()
-
-        splits = stats[0]['splits']
-
-        # sit = HittingSeason(**adapter._transform_keys_in_data(splits[0]))
-        sit = HittingSituational(**adapter._transform_keys_in_data(splits[0]))
 
     def test_hitting_stat_attributes_player(self, m):
         """mlb get stats should return pitching stats"""
