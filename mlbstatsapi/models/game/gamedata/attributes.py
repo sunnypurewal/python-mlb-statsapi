@@ -165,9 +165,9 @@ class GameInfo:
     delaydurationminutes : int
         The length of delay for the game in minutes
     """
-    attendance: Optional[int]
-    firstpitch: Optional[str]
-    gamedurationminutes: Optional[int]
+    attendance: Optional[int] = None
+    firstpitch: Optional[str] = None
+    gamedurationminutes: Optional[int] = None
     delaydurationminutes: Optional[int] = None
 
 
