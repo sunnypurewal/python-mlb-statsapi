@@ -65,8 +65,8 @@ class GameData:
     alerts: List
     probablepitchers: Union[GameProbablePitchers, dict]
     moundvisits: Optional[Union[MoundVisits, dict]] = None
-    gameinfo: Union[GameInfo, dict] = field(default_factory=dict)
-    weather: Union[GameWeather, dict] = field(default_factory=dict)
+    gameinfo: Optional[Union[GameInfo, dict]] = field(default_factory=dict)
+    weather: Optional[Union[GameWeather, dict]] = field(default_factory=dict)
     officialscorer: Optional[Union[Person, dict]] = field(default_factory=dict)
     primarydatacaster: Optional[Union[Person, dict]] = field(default_factory=dict)
     secondarydatacaster: Optional[Union[Person, dict]] = field(default_factory=dict)
