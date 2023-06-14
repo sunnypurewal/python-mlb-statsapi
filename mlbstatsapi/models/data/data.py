@@ -260,14 +260,17 @@ class Count:
     strikes : int
         strike count
     """
-    balls: int
-    outs: int
-    strikes: int
+    balls: int = 0
+    outs: int = 0
+    strikes: int = 0
     inning: Optional[int] = None
     runneron1b: Optional[bool] = None
     runneron2b: Optional[bool] = None
     runneron3b: Optional[bool] = None
     istopinning: Optional[bool] = None
+
+    def __hash__(self) -> int:
+        return hash(self.balls) + hash(self.outs) + hash(self.strikes) + hash(self.inning) + hash(self.runneron1b) + hash(self.runneron2b) + hash(self.runneron3b) + hash(self.istopinning)
 
     def __repr__(self) -> str:
         kws = [f'{key}={value}' for key, value in self.__dict__.items() if value is not None and value]
