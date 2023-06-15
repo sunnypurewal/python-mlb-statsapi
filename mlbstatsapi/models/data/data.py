@@ -229,10 +229,10 @@ class CodeDesc:
     """
     code: str
     description: Optional[str] = None
-
-@dataclass
-class SitCode(CodeDesc):
     sortorder: Optional[int] = None
+
+    def __hash__(self) -> int:
+        return hash(self.code)
 
 @dataclass(repr=False)
 class Count:

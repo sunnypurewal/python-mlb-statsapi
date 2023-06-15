@@ -8,7 +8,7 @@ from mlbstatsapi.mlb_module import merge_keys
 from mlbstatsapi.models.data import (
     Count,
     PlayDetails,
-    SitCode
+    CodeDesc
 )
 
 from .stats import Sabermetrics, ExpectedStatistics, Split
@@ -430,11 +430,11 @@ class PitchingSituational(Split):
     """
     _stat = ['statSplits']
     stat: Union[SimplePitchingSplit, dict]
-    split: Union[SitCode, dict]
+    split: Union[CodeDesc, dict]
     
     def __post_init__(self):
         self.stat = SimplePitchingSplit(**self.stat)
-        self.split = SitCode(**self.split)
+        self.split = CodeDesc(**self.split)
         super().__post_init__()
 
 @dataclass(kw_only=True, repr=False)

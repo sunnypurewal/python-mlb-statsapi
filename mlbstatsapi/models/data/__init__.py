@@ -7,5 +7,4 @@
     CodeDesc,
     Count,
     PlayDetails,
-    SitCode
 )
