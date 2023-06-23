@@ -210,6 +210,7 @@ class SimplePitchingSplit:
     balls: Optional[int] = None
     outspitched: Optional[int] = None
     rbi: Optional[int] = None
+    summary: Optional[str] = None
 
     def __repr__(self) -> str:
         kws = [f'{key}={value}' for key, value in self.__dict__.items() if value is not None and value]
