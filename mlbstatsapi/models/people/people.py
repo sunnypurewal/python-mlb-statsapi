@@ -189,6 +189,7 @@ class Player(Person):
     parentteamid: int
     position: InitVar[dict]
     status: Union[Status, dict]
+    note: Optional[str] = None
 
     def __post_init__(self, position: dict):
         self.primaryposition = Position(**position)
