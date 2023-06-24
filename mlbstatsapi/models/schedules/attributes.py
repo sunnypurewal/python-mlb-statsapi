@@ -64,12 +64,14 @@ class ScheduleHomeAndAway:
 
 @dataclass
 class ScheduleLineups:
-  homeplayers: Union[list[Person], list]
-  awayplayers: Union[list[Person], list]
+  homeplayers: Optional[Union[list[Person], list]] = None
+  awayplayers: Optional[Union[list[Person], list]] = None
 
   def __post_init__(self):
-    self.homeplayers = [Person(**d) for d in self.homeplayers]
-    self.awayplayers = [Person(**d) for d in self.awayplayers]
+    if self.homeplayers:
+        self.homeplayers = [Person(**d) for d in self.homeplayers]
+    if self.awayplayers:
+        self.awayplayers = [Person(**d) for d in self.awayplayers]
 
 @dataclass(repr=False)
 class ScheduleGames:
